@@ -9,14 +9,14 @@ import SwiftUI
 
 struct MakerView: View {
     
-    let pizzas: [Pizza] = [
+    @State var pizzas: [Pizza] = [
         Pizza(breadName: "Bread_1"),
         Pizza(breadName: "Bread_2"),
         Pizza(breadName: "Bread_3"),
         Pizza(breadName: "Bread_4"),
         Pizza(breadName: "Bread_5")
     ]
-    @State var currentPizza: Pizza = .init(breadName: "Bread_1")
+    @State var currentPizza = "Bread_1"
     @State var currentSize: PizzaSize = .medium
     
     let toppings: [String] = ["Basil", "Onion", "Broccoli", "Mushroom", "Sausage"]
@@ -59,13 +59,59 @@ struct MakerView: View {
                     }
                 }
                 .padding(.top, 10)
-                toppingsView
+                carrouselToppings
                 Spacer()
                 cartButton
                 Spacer()
             }
         }
         .ignoresSafeArea(.all, edges: .bottom)
+    }
+    
+    func getIndex(breadName: String) -> Int {
+        let index = pizzas.firstIndex { pizza in
+            return pizza.breadName == breadName
+        } ?? 0
+        return index
+    }
+    
+    @ViewBuilder
+    func ToppingsView(toppings: [Topping], pizza: Pizza, width: CGFloat) -> some View {
+        Group {
+            ForEach(toppings.indices, id: \.self) { index in
+                // cada topin son 10 images de topping
+                let topping = toppings[index]
+                ZStack {
+                    
+                    ForEach(1...10, id: \.self) { subIndex in
+                        
+                        // 360 / 10 toppings = 36
+                        let rotation = Double(subIndex) * 36 // para intentar poner los toppings en posiciones aleatorias
+                        
+                        
+                        Image("\(topping.toppingName)_\(subIndex)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 35, height: 35)
+                            .offset(x: width / 2)
+                            .rotationEffect(.init(degrees: rotation))
+                    }
+                }
+                // Adding Scaling Animation...
+                // Triggering Scaling animation when the topping is added...
+                .scaleEffect(topping.isAdded ? 1 : 10,  anchor: .center)
+                .onAppear {
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                        
+                        withAnimation{
+                            pizzas[getIndex(breadName: pizza.breadName)].toppings[index].isAdded = true
+                        }
+                    }
+                }
+            }
+             
+        }
     }
 }
 
@@ -98,7 +144,7 @@ extension MakerView {
     private var pizzaView: some View {
         
         GeometryReader { proxy in
-            let _ = proxy.size
+            let size = proxy.size
             
             ZStack {
                 Image("Plate")
@@ -109,10 +155,16 @@ extension MakerView {
                 
                 TabView(selection: $currentPizza) {
                     ForEach(pizzas) { pizza in
-                        Image(pizza.breadName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .scaleEffect(currentSize == .large ? 1 : (currentSize == .medium ? 0.95 : 0.9))
+                        
+                        ZStack {
+                            Image(pizza.breadName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            ToppingsView(toppings: pizza.toppings, pizza: pizza, width: size.width / 2 - 45)
+                        }
+                        .scaleEffect(currentSize == .large ? 1 : (currentSize == .medium ? 0.95 : 0.9))
+                        .tag(pizza.breadName)
+
                     }
                     .padding(40)
                 }
@@ -123,7 +175,7 @@ extension MakerView {
         .frame(height: 300)
     }
     
-    private var toppingsView: some View {
+    private var carrouselToppings: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
                 ForEach(toppings, id: \.self) { tooping in
@@ -140,7 +192,11 @@ extension MakerView {
                         .padding()
                         .contentShape(Circle())
                         .onTapGesture {
-                            //TODO: Add action when topping is tapped
+                            //TODO: Add random position to toppings
+                            let toppingObject = Topping(toppingName: tooping)
+                            withAnimation {
+                                pizzas[getIndex(breadName: currentPizza)].toppings.append(toppingObject)
+                            }
                         }
                 }
             }

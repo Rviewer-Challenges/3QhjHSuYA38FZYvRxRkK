@@ -13,6 +13,7 @@
 		42D1EC2D290FEA0B00CE1099 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC2C290FEA0B00CE1099 /* ActionButton.swift */; };
 		42D1EC2F290FF3C300CE1099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D1EC2E290FF3C300CE1099 /* Assets.xcassets */; };
 		42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC30290FFB1C00CE1099 /* Pizza.swift */; };
+		42D1EC332910372300CE1099 /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC322910372300CE1099 /* Topping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		42D1EC2C290FEA0B00CE1099 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		42D1EC2E290FF3C300CE1099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42D1EC30290FFB1C00CE1099 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		42D1EC322910372300CE1099 /* Topping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				42D1EC30290FFB1C00CE1099 /* Pizza.swift */,
+				42D1EC322910372300CE1099 /* Topping.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */,
 				42D1EC2B290FE81B00CE1099 /* MakerView.swift in Sources */,
 				42D1EC16290F1AF400CE1099 /* AppetitoApp.swift in Sources */,
+				42D1EC332910372300CE1099 /* Topping.swift in Sources */,
 				42D1EC2D290FEA0B00CE1099 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
