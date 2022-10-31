@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42D1EC16290F1AF400CE1099 /* AppetitoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC15290F1AF400CE1099 /* AppetitoApp.swift */; };
+		42D1EC1D290F1AF600CE1099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D1EC1C290F1AF600CE1099 /* Preview Assets.xcassets */; };
+		42D1EC2B290FE81B00CE1099 /* MakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC2A290FE81B00CE1099 /* MakerView.swift */; };
+		42D1EC2D290FEA0B00CE1099 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC2C290FEA0B00CE1099 /* ActionButton.swift */; };
+		42D1EC2F290FF3C300CE1099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D1EC2E290FF3C300CE1099 /* Assets.xcassets */; };
+		42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC30290FFB1C00CE1099 /* Pizza.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42D1EC12290F1AF400CE1099 /* Appetito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetito.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42D1EC15290F1AF400CE1099 /* AppetitoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetitoApp.swift; sourceTree = "<group>"; };
+		42D1EC1C290F1AF600CE1099 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42D1EC2A290FE81B00CE1099 /* MakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerView.swift; sourceTree = "<group>"; };
+		42D1EC2C290FEA0B00CE1099 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		42D1EC2E290FF3C300CE1099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42D1EC30290FFB1C00CE1099 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42D1EC0F290F1AF400CE1099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42D1EC09290F1AF400CE1099 = {
+			isa = PBXGroup;
+			children = (
+				42D1EC14290F1AF400CE1099 /* Appetito */,
+				42D1EC13290F1AF400CE1099 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42D1EC13290F1AF400CE1099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC12290F1AF400CE1099 /* Appetito.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42D1EC14290F1AF400CE1099 /* Appetito */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC25290FE6E800CE1099 /* Extensions */,
+				42D1EC24290FE6DC00CE1099 /* Models */,
+				42D1EC23290FE6D500CE1099 /* Core */,
+				42D1EC15290F1AF400CE1099 /* AppetitoApp.swift */,
+				42D1EC2E290FF3C300CE1099 /* Assets.xcassets */,
+				42D1EC1B290F1AF600CE1099 /* Preview Content */,
+			);
+			path = Appetito;
+			sourceTree = "<group>";
+		};
+		42D1EC1B290F1AF600CE1099 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC1C290F1AF600CE1099 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42D1EC23290FE6D500CE1099 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC27290FE71500CE1099 /* Maker */,
+				42D1EC26290FE70B00CE1099 /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		42D1EC24290FE6DC00CE1099 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC30290FFB1C00CE1099 /* Pizza.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42D1EC25290FE6E800CE1099 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		42D1EC26290FE70B00CE1099 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC2C290FEA0B00CE1099 /* ActionButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		42D1EC27290FE71500CE1099 /* Maker */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC29290FE7BB00CE1099 /* ViewModels */,
+				42D1EC28290FE7B400CE1099 /* Views */,
+			);
+			path = Maker;
+			sourceTree = "<group>";
+		};
+		42D1EC28290FE7B400CE1099 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC2A290FE81B00CE1099 /* MakerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42D1EC29290FE7BB00CE1099 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42D1EC11290F1AF400CE1099 /* Appetito */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42D1EC20290F1AF600CE1099 /* Build configuration list for PBXNativeTarget "Appetito" */;
+			buildPhases = (
+				42D1EC0E290F1AF400CE1099 /* Sources */,
+				42D1EC0F290F1AF400CE1099 /* Frameworks */,
+				42D1EC10290F1AF400CE1099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Appetito;
+			productName = Appetito;
+			productReference = 42D1EC12290F1AF400CE1099 /* Appetito.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42D1EC0A290F1AF400CE1099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					42D1EC11290F1AF400CE1099 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 42D1EC0D290F1AF400CE1099 /* Build configuration list for PBXProject "Appetito" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42D1EC09290F1AF400CE1099;
+			productRefGroup = 42D1EC13290F1AF400CE1099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42D1EC11290F1AF400CE1099 /* Appetito */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42D1EC10290F1AF400CE1099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D1EC2F290FF3C300CE1099 /* Assets.xcassets in Resources */,
+				42D1EC1D290F1AF600CE1099 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42D1EC0E290F1AF400CE1099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */,
+				42D1EC2B290FE81B00CE1099 /* MakerView.swift in Sources */,
+				42D1EC16290F1AF400CE1099 /* AppetitoApp.swift in Sources */,
+				42D1EC2D290FEA0B00CE1099 /* ActionButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		42D1EC1E290F1AF600CE1099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42D1EC1F290F1AF600CE1099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42D1EC21290F1AF600CE1099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Appetito/Preview Content\"";
+				DEVELOPMENT_TEAM = WRGH8XLUL2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dariogallegos.Appetito;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42D1EC22290F1AF600CE1099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Appetito/Preview Content\"";
+				DEVELOPMENT_TEAM = WRGH8XLUL2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dariogallegos.Appetito;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42D1EC0D290F1AF400CE1099 /* Build configuration list for PBXProject "Appetito" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42D1EC1E290F1AF600CE1099 /* Debug */,
+				42D1EC1F290F1AF600CE1099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42D1EC20290F1AF600CE1099 /* Build configuration list for PBXNativeTarget "Appetito" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42D1EC21290F1AF600CE1099 /* Debug */,
+				42D1EC22290F1AF600CE1099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42D1EC0A290F1AF400CE1099 /* Project object */;
+}
