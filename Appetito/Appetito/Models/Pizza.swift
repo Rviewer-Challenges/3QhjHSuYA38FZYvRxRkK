@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Pizza: Identifiable {
+struct Pizza: Identifiable, Hashable {
     var id = UUID().uuidString
     var breadName: String
 }
