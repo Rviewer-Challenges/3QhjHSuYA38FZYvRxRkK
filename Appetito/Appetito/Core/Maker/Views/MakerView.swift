@@ -75,6 +75,13 @@ struct MakerView: View {
         return index
     }
     
+    func isAdded(topping: String)->Bool {
+         let status = pizzas[getIndex(breadName: currentPizza)].toppings.contains { currentTopping in
+            return currentTopping.toppingName == topping
+        }
+        return status
+    }
+    
     @ViewBuilder
     func ToppingsView(toppings: [Topping], pizza: Pizza, width: CGFloat) -> some View {
         Group {
@@ -83,17 +90,20 @@ struct MakerView: View {
                 let topping = toppings[index]
                 ZStack {
                     
-                    ForEach(1...10, id: \.self) { subIndex in
+                    ForEach(1...20, id: \.self) { subIndex in
                         
                         // 360 / 10 toppings = 36
                         let rotation = Double(subIndex) * 36 // para intentar poner los toppings en posiciones aleatorias
+                        let centerIndex = (subIndex > 10 ? (subIndex - 10) : subIndex)
                         
                         
-                        Image("\(topping.toppingName)_\(subIndex)")
+                        Image("\(topping.toppingName)_\(centerIndex)")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 35, height: 35)
-                            .offset(x: width / 2)
+                        //subindex - 1 para que el random index empiece desde 0
+                            .offset(x: (width / 2) - topping.randomToppingPostions[subIndex - 1].width,
+                                    y: topping.randomToppingPostions[subIndex - 1].height)
                             .rotationEffect(.init(degrees: rotation))
                     }
                 }
@@ -178,8 +188,8 @@ extension MakerView {
     private var carrouselToppings: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
-                ForEach(toppings, id: \.self) { tooping in
-                    Image("\(tooping)_3")
+                ForEach(toppings, id: \.self) { topping in
+                    Image("\(topping)_3")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 44, height: 44)
@@ -187,13 +197,33 @@ extension MakerView {
                         .background(
                             Color.green
                                 .clipShape(Circle())
-                                .opacity(0.15)
+                                .opacity(isAdded(topping: topping) ? 0.15 : 0)
+                                .animation(.easeInOut, value: currentPizza)
                         )
                         .padding()
                         .contentShape(Circle())
                         .onTapGesture {
                             //TODO: Add random position to toppings
-                            let toppingObject = Topping(toppingName: tooping)
+                            
+                            if isAdded(topping: topping){
+                                // getting index and removing it...
+                                if let index = pizzas[getIndex(breadName: currentPizza)].toppings.firstIndex(where: { currentTopping in
+                                    return topping == currentTopping.toppingName
+                                }){
+                                    pizzas[getIndex(breadName: currentPizza)].toppings.remove(at: index)
+                                }
+                                
+                                return
+                            }
+                            
+                            //random positions
+                            var positions: [CGSize] = []
+                            for _ in 1...20 {
+                                positions.append(CGSize(width: .random(in: -20...50), height: .random(in: -45...45)))
+                            }
+                            
+                            
+                            let toppingObject = Topping(toppingName: topping, randomToppingPostions: positions)
                             withAnimation {
                                 pizzas[getIndex(breadName: currentPizza)].toppings.append(toppingObject)
                             }
