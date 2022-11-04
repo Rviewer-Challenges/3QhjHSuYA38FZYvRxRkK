@@ -14,6 +14,9 @@
 		42D1EC2F290FF3C300CE1099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D1EC2E290FF3C300CE1099 /* Assets.xcassets */; };
 		42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC30290FFB1C00CE1099 /* Pizza.swift */; };
 		42D1EC332910372300CE1099 /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC322910372300CE1099 /* Topping.swift */; };
+		42D1EC3529147EBF00CE1099 /* MakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC3429147EBF00CE1099 /* MakerViewModel.swift */; };
+		42D1EC372914807D00CE1099 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC362914807D00CE1099 /* PreviewProvider.swift */; };
+		42D1EC3A2915A87D00CE1099 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC392915A87D00CE1099 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		42D1EC2E290FF3C300CE1099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42D1EC30290FFB1C00CE1099 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		42D1EC322910372300CE1099 /* Topping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
+		42D1EC3429147EBF00CE1099 /* MakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerViewModel.swift; sourceTree = "<group>"; };
+		42D1EC362914807D00CE1099 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		42D1EC392915A87D00CE1099 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 		42D1EC14290F1AF400CE1099 /* Appetito */ = {
 			isa = PBXGroup;
 			children = (
+				42D1EC382915A87200CE1099 /* Utils */,
 				42D1EC25290FE6E800CE1099 /* Extensions */,
 				42D1EC24290FE6DC00CE1099 /* Models */,
 				42D1EC23290FE6D500CE1099 /* Core */,
@@ -96,6 +103,7 @@
 		42D1EC25290FE6E800CE1099 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				42D1EC362914807D00CE1099 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -128,8 +136,17 @@
 		42D1EC29290FE7BB00CE1099 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				42D1EC3429147EBF00CE1099 /* MakerViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		42D1EC382915A87200CE1099 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				42D1EC392915A87D00CE1099 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +222,11 @@
 				42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */,
 				42D1EC2B290FE81B00CE1099 /* MakerView.swift in Sources */,
 				42D1EC16290F1AF400CE1099 /* AppetitoApp.swift in Sources */,
+				42D1EC3529147EBF00CE1099 /* MakerViewModel.swift in Sources */,
 				42D1EC332910372300CE1099 /* Topping.swift in Sources */,
+				42D1EC372914807D00CE1099 /* PreviewProvider.swift in Sources */,
 				42D1EC2D290FEA0B00CE1099 /* ActionButton.swift in Sources */,
+				42D1EC3A2915A87D00CE1099 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +361,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,8 +390,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
