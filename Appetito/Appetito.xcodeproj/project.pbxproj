@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42C10ED92916FBC80027D1C2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C10ED82916FBC80027D1C2 /* CircleButton.swift */; };
+		42C10EDB2916FEE80027D1C2 /* SizeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C10EDA2916FEE80027D1C2 /* SizeButton.swift */; };
 		42D1EC16290F1AF400CE1099 /* AppetitoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC15290F1AF400CE1099 /* AppetitoApp.swift */; };
 		42D1EC1D290F1AF600CE1099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D1EC1C290F1AF600CE1099 /* Preview Assets.xcassets */; };
 		42D1EC2B290FE81B00CE1099 /* MakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D1EC2A290FE81B00CE1099 /* MakerView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42C10ED82916FBC80027D1C2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		42C10EDA2916FEE80027D1C2 /* SizeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeButton.swift; sourceTree = "<group>"; };
 		42D1EC12290F1AF400CE1099 /* Appetito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D1EC15290F1AF400CE1099 /* AppetitoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetitoApp.swift; sourceTree = "<group>"; };
 		42D1EC1C290F1AF600CE1099 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				42D1EC2A290FE81B00CE1099 /* MakerView.swift */,
+				42C10ED82916FBC80027D1C2 /* CircleButton.swift */,
+				42C10EDA2916FEE80027D1C2 /* SizeButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,8 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D1EC31290FFB1C00CE1099 /* Pizza.swift in Sources */,
+				42C10EDB2916FEE80027D1C2 /* SizeButton.swift in Sources */,
 				42D1EC2B290FE81B00CE1099 /* MakerView.swift in Sources */,
 				42D1EC16290F1AF400CE1099 /* AppetitoApp.swift in Sources */,
+				42C10ED92916FBC80027D1C2 /* CircleButton.swift in Sources */,
 				42D1EC3529147EBF00CE1099 /* MakerViewModel.swift in Sources */,
 				42D1EC332910372300CE1099 /* Topping.swift in Sources */,
 				42D1EC372914807D00CE1099 /* PreviewProvider.swift in Sources */,

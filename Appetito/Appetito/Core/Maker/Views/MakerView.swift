@@ -133,22 +133,7 @@ extension MakerView {
     private var pizzaSizeBar: some View {
         HStack(spacing: 20) {
             ForEach(PizzaSize.allCases, id: \.rawValue) { size in
-                Button {
-                    withAnimation {
-                        currentSize = size
-                    }
-                } label: {
-                    Text(size.rawValue)
-                        .font(.title2)
-                        .foregroundColor(.black)
-                        .padding()
-                        .background(
-                            Color.white
-                                .clipShape(Circle())
-                                .shadow(color:.black.opacity(0.1), radius: 5, x: 5, y: 5)
-                                .opacity(currentSize == size ? 1 : 0)
-                        )
-                }
+                SizeButton(size: size, currentSize: $currentSize)
             }
         }
         .padding(.top, 10)
@@ -158,22 +143,11 @@ extension MakerView {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
                 ForEach(viewModel.toppings, id: \.self) { topping in
-                    Image("\(topping)_3")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 44, height: 44)
-                        .padding(12)
-                        .background(
-                            Color.green
-                                .clipShape(Circle())
-                                .opacity(viewModel.isToppingAdded(topping: topping) ? 0.15 : 0)
-                                .animation(.easeInOut, value: viewModel.currentPizza)
-                        )
-                        .padding()
-                        .contentShape(Circle())
-                        .onTapGesture {
-                            viewModel.toppingTapped(toppingName: topping)
-                        }
+                    CircleButton(toppingName: "\(topping)_3",
+                                 isTapped: viewModel.isToppingAdded(topping: topping),
+                                 valueAnimated: viewModel.currentPizza) {
+                        viewModel.toppingTapped(toppingName: topping)
+                    }
                 }
             }
         }
